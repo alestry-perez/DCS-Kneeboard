@@ -44,8 +44,11 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             ListTile(
-              title: Text('Caucasus', style: TextStyle(fontSize: 20)),
-              leading: Icon(Icons.airplanemode_active),
+              title: const Text('Caucasus', 
+              style: TextStyle(
+                fontSize: 20, 
+                fontWeight: FontWeight.bold)),
+              leading: const Icon(Icons.airplanemode_active),
               onTap: () {
                 Navigator.push(
                   context,
@@ -54,8 +57,12 @@ class _MyHomePageState extends State<MyHomePage> {
               },
             ),
             ListTile(
-              title: Text('Persian Gulf', style: TextStyle(fontSize: 20)),
-              leading: Icon(Icons.airplanemode_active),
+              title: const Text('Persian Gulf', 
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold
+                )),
+              leading: const Icon(Icons.airplanemode_active),
               onTap: () {
                 Navigator.push(
                   context,
@@ -64,8 +71,12 @@ class _MyHomePageState extends State<MyHomePage> {
               },
             ),
             ListTile(
-              title: Text('Syria', style: TextStyle(fontSize: 20)),
-              leading: Icon(Icons.airplanemode_active),
+              title: const Text('Syria', 
+              style: TextStyle(
+                fontSize: 20, 
+                fontWeight: FontWeight.bold
+                )),
+              leading: const Icon(Icons.airplanemode_active),
               onTap: () {
                 Navigator.push(
                   context,
@@ -74,8 +85,12 @@ class _MyHomePageState extends State<MyHomePage> {
               },
             ),
             ListTile(
-              title: Text('Marianas', style: TextStyle(fontSize: 20)),
-              leading: Icon(Icons.airplanemode_active),
+              title: const Text('Marianas', 
+              style: TextStyle(
+                fontSize: 20, 
+                fontWeight: FontWeight.bold
+                )),
+              leading: const Icon(Icons.airplanemode_active),
               onTap: () {
                 Navigator.push(
                   context,
@@ -84,8 +99,11 @@ class _MyHomePageState extends State<MyHomePage> {
               },
             ),
             ListTile(
-              title: Text('The Channel', style: TextStyle(fontSize: 20)),
-              leading: Icon(Icons.airplanemode_active),
+              title: const Text('The Channel', 
+              style: TextStyle(fontSize: 20, 
+              fontWeight: FontWeight.bold
+              )),
+              leading: const Icon(Icons.airplanemode_active),
               onTap: () {
                 Navigator.push(
                   context,
@@ -94,8 +112,11 @@ class _MyHomePageState extends State<MyHomePage> {
               },
             ),
             ListTile(
-              title: Text('Normandy', style: TextStyle(fontSize: 20)),
-              leading: Icon(Icons.airplanemode_active),
+              title: const Text('Normandy', 
+              style: TextStyle(fontSize: 20, 
+              fontWeight: FontWeight.bold
+              )),
+              leading: const Icon(Icons.airplanemode_active),
               onTap: () {
                 Navigator.push(
                   context,
@@ -104,8 +125,12 @@ class _MyHomePageState extends State<MyHomePage> {
               },
             ),
             ListTile(
-              title: Text('Navada', style: TextStyle(fontSize: 20)),
-              leading: Icon(Icons.airplanemode_active),
+              title: const Text('Navada', 
+              style: TextStyle(
+                fontSize: 20, 
+                fontWeight: FontWeight.bold
+                )),
+              leading: const Icon(Icons.airplanemode_active),
               onTap: () {
                 Navigator.push(
                   context,
