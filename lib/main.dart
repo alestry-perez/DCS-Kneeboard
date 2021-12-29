@@ -11,9 +11,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Kneeboard',
       theme: ThemeData(
-        primarySwatch: Colors.blueGrey,
+        primarySwatch: Colors.amber,
       ),
-      home: const MyHomePage(title: 'Airfeilds'),
+      home: const MyHomePage(title: 'Airfields'),
     );
   }
 }
@@ -40,32 +40,37 @@ class _MyHomePageState extends State<MyHomePage> {
           children: const <Widget>[
             ListTile(
               title: Text('Caucasus' , style: TextStyle(fontSize: 20)),
-              subtitle: Text('Airfeilds' , style: TextStyle(fontSize: 15)),
+              subtitle: Text('Airfields' , style: TextStyle(fontSize: 15)),
               leading: Icon(Icons.airplanemode_active),
             ),
             ListTile(
+              title: Text('Marianas' , style: TextStyle(fontSize: 20)),
+              subtitle: Text('Airfields' , style: TextStyle(fontSize: 15)),
+              leading: Icon(Icons.airplanemode_active),
+            ), 
+            ListTile(
               title: Text('Persian Gulf' , style: TextStyle(fontSize: 20)),
-              subtitle: Text('Airfeilds' , style: TextStyle(fontSize: 15)),
+              subtitle: Text('Airfields' , style: TextStyle(fontSize: 15)),
               leading: Icon(Icons.airplanemode_active),
             ),
             ListTile(
               title: Text('Syria' , style: TextStyle(fontSize: 20)),
-              subtitle: Text('Airfeilds' , style: TextStyle(fontSize: 15)),
+              subtitle: Text('Airfields' , style: TextStyle(fontSize: 15)),
               leading: Icon(Icons.airplanemode_active),
             ),
           ListTile(
-              title: Text('Channel' , style: TextStyle(fontSize: 20)),
-              subtitle: Text('Airfeilds' , style: TextStyle(fontSize: 15)),
+              title: Text('The Channel' , style: TextStyle(fontSize: 20)),
+              subtitle: Text('Airfields' , style: TextStyle(fontSize: 15)),
               leading: Icon(Icons.airplanemode_active),
             ),
             ListTile(
               title: Text('Normandy' , style: TextStyle(fontSize: 20)),
-              subtitle: Text('Airfeilds' , style: TextStyle(fontSize: 15)),
+              subtitle: Text('Airfields' , style: TextStyle(fontSize: 15)),
               leading: Icon(Icons.airplanemode_active),
             ),
             ListTile(
               title: Text('Navada' , style: TextStyle(fontSize: 20)),
-              subtitle: Text('Airfeilds' , style: TextStyle(fontSize: 15)),
+              subtitle: Text('Airfields' , style: TextStyle(fontSize: 15)),
               leading: Icon(Icons.airplanemode_active),
             ), 
           ],
