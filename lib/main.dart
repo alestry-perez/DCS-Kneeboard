@@ -1,4 +1,11 @@
 import 'package:flutter/material.dart';
+import 'cacasus.dart';
+import 'channel.dart';
+import 'marianas.dart';
+import 'navada.dart';
+import 'normandy.dart';
+import 'persian_gulf.dart';
+import 'syria.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.amber,
       ),
-      home: const MyHomePage(title: 'Airfields'),
+      home: const MyHomePage(title: 'Regional Airfields'),
     );
   }
 }
@@ -21,7 +28,6 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
   final String title;
-
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
@@ -36,42 +42,76 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: const <Widget>[
+          children: <Widget>[
             ListTile(
               title: Text('Caucasus', style: TextStyle(fontSize: 20)),
-              subtitle: Text('Airfields', style: TextStyle(fontSize: 15)),
               leading: Icon(Icons.airplanemode_active),
-              
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Caucasus()),
+                );
+              },
             ),
             ListTile(
               title: Text('Persian Gulf', style: TextStyle(fontSize: 20)),
-              subtitle: Text('Airfields', style: TextStyle(fontSize: 15)),
               leading: Icon(Icons.airplanemode_active),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const PersianGulf()),
+                );
+              },
             ),
             ListTile(
               title: Text('Syria', style: TextStyle(fontSize: 20)),
-              subtitle: Text('Airfields', style: TextStyle(fontSize: 15)),
               leading: Icon(Icons.airplanemode_active),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Syria()),
+                );
+              },
             ),
             ListTile(
               title: Text('Marianas', style: TextStyle(fontSize: 20)),
-              subtitle: Text('Airfields', style: TextStyle(fontSize: 15)),
               leading: Icon(Icons.airplanemode_active),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Marianas()),
+                );
+              },
             ),
             ListTile(
               title: Text('The Channel', style: TextStyle(fontSize: 20)),
-              subtitle: Text('Airfields', style: TextStyle(fontSize: 15)),
               leading: Icon(Icons.airplanemode_active),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Channel()),
+                );
+              },
             ),
             ListTile(
               title: Text('Normandy', style: TextStyle(fontSize: 20)),
-              subtitle: Text('Airfields', style: TextStyle(fontSize: 15)),
               leading: Icon(Icons.airplanemode_active),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Normandy()),
+                );
+              },
             ),
             ListTile(
               title: Text('Navada', style: TextStyle(fontSize: 20)),
-              subtitle: Text('Airfields', style: TextStyle(fontSize: 15)),
               leading: Icon(Icons.airplanemode_active),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Navada()),
+                );
+              },
             ),
           ],
         ),
