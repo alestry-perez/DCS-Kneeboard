@@ -22,7 +22,7 @@ class Caucasus extends StatelessWidget {
                 )),
               leading: const Icon(Icons.airplanemode_active),
               onTap: () {
-                Navigator.pushNamed(context, '/Anapa');
+                Navigator.pushNamed(context, './Anapa');
               },
             ),
             ListTile(
