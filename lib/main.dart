@@ -1,91 +1,76 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(
-    MyApp(
-      items: List<ListItem>.generate(
-        26,
-        (i) => i % 2 == 0
-            ? HeadingItem('AIRFEILD $i')
-            : MessageItem('Info $i', 'body $i'),
-      ),
-    ),
-  );
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  final List<ListItem> items;
+  const MyApp({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Kneeboard',
+      theme: ThemeData(
+        primarySwatch: Colors.blueGrey,
+      ),
+      home: const MyHomePage(title: 'Airfeilds'),
+    );
+  }
+}
 
-  const MyApp({Key? key, required this.items}) : super(key: key);
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({Key? key, required this.title}) : super(key: key);
+  final String title;
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    const title = 'Kneeboard';
-
-    return MaterialApp(
-      theme: ThemeData(
-        primarySwatch: Colors.grey,
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
       ),
-      title: title,
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text(title),
-        ),
-        body: ListView.builder(
-          // Let the ListView know how many items it needs to build.
-          itemCount: items.length,
-          // Provide a builder function. This is where the magic happens.
-          // Convert each item into a widget based on the type of item it is.
-          itemBuilder: (context, index) {
-            final item = items[index];
-            return ListTile(
-              title: item.buildTitle(context),
-              subtitle: item.buildSubtitle(context),
-            );
-          },
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: const <Widget>[
+            ListTile(
+              title: Text('Caucasus' , style: TextStyle(fontSize: 20)),
+              subtitle: Text('Airfeilds' , style: TextStyle(fontSize: 15)),
+              leading: Icon(Icons.airplanemode_active),
+            ),
+            ListTile(
+              title: Text('Persian Gulf' , style: TextStyle(fontSize: 20)),
+              subtitle: Text('Airfeilds' , style: TextStyle(fontSize: 15)),
+              leading: Icon(Icons.airplanemode_active),
+            ),
+            ListTile(
+              title: Text('Syria' , style: TextStyle(fontSize: 20)),
+              subtitle: Text('Airfeilds' , style: TextStyle(fontSize: 15)),
+              leading: Icon(Icons.airplanemode_active),
+            ),
+          ListTile(
+              title: Text('Channel' , style: TextStyle(fontSize: 20)),
+              subtitle: Text('Airfeilds' , style: TextStyle(fontSize: 15)),
+              leading: Icon(Icons.airplanemode_active),
+            ),
+            ListTile(
+              title: Text('Normandy' , style: TextStyle(fontSize: 20)),
+              subtitle: Text('Airfeilds' , style: TextStyle(fontSize: 15)),
+              leading: Icon(Icons.airplanemode_active),
+            ),
+            ListTile(
+              title: Text('Navada' , style: TextStyle(fontSize: 20)),
+              subtitle: Text('Airfeilds' , style: TextStyle(fontSize: 15)),
+              leading: Icon(Icons.airplanemode_active),
+            ), 
+          ],
         ),
       ),
     );
   }
-}
-
-/// The base class for the different types of items the list can contain.
-abstract class ListItem {
-  /// The title line to show in a list item.
-  Widget buildTitle(BuildContext context);
-
-  /// The subtitle line, if any, to show in a list item.
-  Widget buildSubtitle(BuildContext context);
-}
-
-/// A ListItem that contains data to display a heading.
-class HeadingItem implements ListItem {
-  final String heading;
-
-  HeadingItem(this.heading);
-
-  @override
-  Widget buildTitle(BuildContext context) {
-    return Text(
-      heading,
-      style: Theme.of(context).textTheme.headline5,
-    );
-  }
-
-  @override
-  Widget buildSubtitle(BuildContext context) => const SizedBox.shrink();
-}
-
-/// A ListItem that contains data to display a message.
-class MessageItem implements ListItem {
-  final String sender;
-  final String body;
-
-  MessageItem(this.sender, this.body);
-
-  @override
-  Widget buildTitle(BuildContext context) => Text(sender);
-
-  @override
-  Widget buildSubtitle(BuildContext context) => Text(body);
 }
