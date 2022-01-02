@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.amber,
       ),
-      home: const MyHomePage(title: 'Regional Airfields'),
+      home: const MyHomePage(title: 'Regions'),
     );
   }
 }
@@ -39,104 +39,127 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      body: SafeArea(
+        child: ListView(
           children: <Widget>[
-            ListTile(
+            Card(
+              child: ListTile(
               title: const Text('Caucasus', 
               style: TextStyle(
                 fontSize: 20, 
-                fontWeight: FontWeight.bold)),
-              leading: const Icon(Icons.airplanemode_active),
+                fontWeight: FontWeight.bold
+                )
+              ),
+              leading: const Icon(Icons.view_list_rounded),
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => const Caucasus()),
                 );
-              },
+                },
+              ),
             ),
-            ListTile(
+            Card(
+              child: ListTile(
               title: const Text('Persian Gulf', 
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold
-                )),
-              leading: const Icon(Icons.airplanemode_active),
+                )
+              ),
+              leading: const Icon(Icons.view_list_rounded),
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => const PersianGulf()),
-                );
-              },
+                  );
+                },
+              ), 
             ),
-            ListTile(
+            Card(
+              child: ListTile(
               title: const Text('Syria', 
               style: TextStyle(
                 fontSize: 20, 
                 fontWeight: FontWeight.bold
-                )),
-              leading: const Icon(Icons.airplanemode_active),
+                )
+              ),
+              leading: const Icon(Icons.view_list_rounded),
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => const Syria()),
-                );
-              },
+                  );
+                },
+              ),
             ),
-            ListTile(
+            Card(
+              child: ListTile(
               title: const Text('Marianas', 
               style: TextStyle(
                 fontSize: 20, 
                 fontWeight: FontWeight.bold
-                )),
-              leading: const Icon(Icons.airplanemode_active),
+                )
+              ),
+              leading: const Icon(Icons.view_list_rounded),
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => const Marianas()),
-                );
-              },
+                  );
+                },
+              ),
             ),
-            ListTile(
+            Card(
+              child: ListTile(
               title: const Text('The Channel', 
-              style: TextStyle(fontSize: 20, 
-              fontWeight: FontWeight.bold
-              )),
-              leading: const Icon(Icons.airplanemode_active),
+              style: TextStyle(
+                fontSize: 20, 
+                fontWeight: FontWeight.bold
+                )
+              ),
+              leading: const Icon(Icons.view_list_rounded),
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => const Channel()),
-                );
-              },
+                  );
+                },
+              ),
             ),
-            ListTile(
+            Card(
+              child: ListTile(
               title: const Text('Normandy', 
-              style: TextStyle(fontSize: 20, 
-              fontWeight: FontWeight.bold
-              )),
-              leading: const Icon(Icons.airplanemode_active),
+              style: TextStyle(
+                fontSize: 20, 
+                fontWeight: FontWeight.bold
+                )
+              ),
+              leading: const Icon(Icons.view_list_rounded),
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => const Normandy()),
-                );
-              },
+                  );
+                },
+              ),
             ),
-            ListTile(
+            Card(
+              child: ListTile(
               title: const Text('Navada', 
               style: TextStyle(
                 fontSize: 20, 
                 fontWeight: FontWeight.bold
-                )),
-              leading: const Icon(Icons.airplanemode_active),
+                )
+              ),
+              leading: const Icon(Icons.view_list_rounded),
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => const Navada()),
-                );
-              },
+                  );
+                },
+              ),
             ),
           ],
         ),
