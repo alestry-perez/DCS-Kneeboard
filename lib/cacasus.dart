@@ -9,70 +9,37 @@ class Caucasus extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Caucasus Airfields"),
       ),
-      body: Center(
-          child: ListView(children: <Widget>[
+      body: ListView(children: <Widget>[
         Card(
           child: ListTile(
             title: const Text('Anapa',
-                style: TextStyle(
-                  fontSize: 20, 
-                  fontWeight: FontWeight.bold
-                  )
-                ),
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
             subtitle: const Text('URKA',
-                style: TextStyle(
-                  fontSize: 15, 
-                  fontWeight: FontWeight.bold
-                  )
-                ),
+                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
             leading: const Icon(Icons.airplanemode_active),
             onTap: () {
-            
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => Scaffold(
+                          appBar: AppBar(
+                            title: const Text('Anapa'),
+                          ),
+                          body: Container(
+                            color: Colors.white,
+                            child: const Image(
+                              image: AssetImage(
+                                  'assets/files/caucasus/georgia_1.png'),
+                              fit: BoxFit.fitWidth,
+                              alignment: Alignment.center,
+                            ),
+                          ),
+                        )),
+              );
             },
           ),
         ),
-        Card(
-          child: ListTile(
-            title: const Text('Batumi',
-                style: TextStyle(
-                  fontSize: 20, 
-                  fontWeight: FontWeight.bold
-                  )
-                ),
-            subtitle: const Text('UGSB',
-                style: TextStyle(
-                  fontSize: 15, 
-                  fontWeight: FontWeight.bold
-                  )
-                ),
-            leading: const Icon(Icons.airplanemode_active),
-            onTap: () {
-              Navigator.pushNamed(context, '/Batumi');
-            },
-          ),
-        ),
-        Card(
-          child: ListTile(
-            title: const Text('Beslan',
-                style: TextStyle(
-                  fontSize: 20, 
-                  fontWeight: FontWeight.bold
-                  )
-                ),
-            subtitle: const Text('URMO',
-                style: TextStyle(
-                  fontSize: 15, 
-                  fontWeight: FontWeight.bold
-                  )
-                ),
-            leading: const Icon(Icons.airplanemode_active),
-            onTap: () {
-              Navigator.pushNamed(context, '/Batumi');
-            },
-          ),
-        ),
-      ])),
+      ]),
     );
   }
 }
-
