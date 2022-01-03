@@ -51,7 +51,13 @@ dev_dependencies:
 # The following section is specific to Flutter.
 flutter:
   assets:
-    - assets/files/caucasus/georgia_1.png
+    - assets/files/caucasus/
+    - assets/files/channel/
+    - assets/files/marianas/
+    - assets/files/navada/
+    - assets/files/normandy/
+    - assets/files/persian_gulf/
+    - assets/files/syria/
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
