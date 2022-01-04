@@ -58,6 +58,7 @@ flutter:
     - assets/files/normandy/
     - assets/files/persian_gulf/
     - assets/files/syria/
+    - assets/imgs/
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

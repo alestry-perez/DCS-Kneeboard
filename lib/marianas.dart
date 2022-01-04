@@ -8,14 +8,38 @@ class Marianas extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Marianas Airfields"),
       ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: const Text('Coming Soon!'),
+      body: ListView(children: <Widget>[
+        Card(
+          child: ListTile(
+            title: const Text('SAMPLE',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+            subtitle: const Text('SAMPLE',
+                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
+            leading: const Icon(Icons.airplanemode_active),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => Scaffold(
+                          appBar: AppBar(
+                            title: const Text('SAMPLE'),
+                          ),
+                          body: InteractiveViewer(
+                              child: const Card(
+                            child: Image(
+                              image: AssetImage(
+                                  'assets/files/caucasus/georgia_1.png'),
+                              fit: BoxFit.fitWidth,
+                              width: double.infinity,
+                              height: double.infinity,
+                            ),
+                          )),
+                        )),
+              );
+            },
+          ),
         ),
-      ),
+      ]),
     );
   }
 }
