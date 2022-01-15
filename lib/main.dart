@@ -12,9 +12,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Kneeboard',
       theme: ThemeData(primarySwatch: Colors.amber),
-      home: const MyHomePage(title: 'Regions'),
+      home: const MyHomePage(title: ''),
     );
   }
 }
@@ -28,25 +29,19 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int tabselected = 0;
-
-  final titles = [
+  final title = [
     'Regions',
     'Information',
     'References',
   ];
-
   final pages = [
     const Home(),
     const Reference(),
     const Information(),
   ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(titles[tabselected]),
-      ),
       bottomNavigationBar: NavigationBar(
         height: 60,
         selectedIndex: tabselected,
@@ -57,22 +52,20 @@ class _MyHomePageState extends State<MyHomePage> {
         },
         destinations: const [
           NavigationDestination(
-              icon: Icon(Icons.home),
-              selectedIcon: Icon(Icons.home_outlined),
+              icon: Icon(Icons.public),
+              selectedIcon: Icon(Icons.public),
               label: 'Regions'),
           NavigationDestination(
               icon: Icon(Icons.book),
-              selectedIcon: Icon(Icons.book_outlined),
+              selectedIcon: Icon(Icons.book),
               label: 'Reference'),
           NavigationDestination(
               icon: Icon(Icons.star),
-              selectedIcon: Icon(Icons.star_border_outlined),
+              selectedIcon: Icon(Icons.star),
               label: 'Information'),
         ],
       ),
-      body: SafeArea(
-        child: pages[tabselected],
-      ),
+      body: pages[tabselected],
     );
   }
 }

@@ -11,9 +11,9 @@ class Marianas extends StatelessWidget {
       body: ListView(children: <Widget>[
         Card(
           child: ListTile(
-            title: const Text('SAMPLE',
+            title: const Text('Orote',
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-            subtitle: const Text('SAMPLE',
+            subtitle: const Text('PG01',
                 style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
             leading: const Icon(Icons.airplanemode_active),
             onTap: () {
@@ -22,13 +22,13 @@ class Marianas extends StatelessWidget {
                 MaterialPageRoute(
                     builder: (context) => Scaffold(
                           appBar: AppBar(
-                            title: const Text('SAMPLE'),
+                            title: const Text('Orote'),
                           ),
                           body: InteractiveViewer(
                               child: const Card(
                             child: Image(
-                              image: AssetImage(
-                                  'assets/files/caucasus/georgia_1.png'),
+                              image:
+                                  AssetImage('assets/files/marianas/17008.png'),
                               fit: BoxFit.fitWidth,
                               width: double.infinity,
                               height: double.infinity,
